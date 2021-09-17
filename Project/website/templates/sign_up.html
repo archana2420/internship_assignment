@@ -1,0 +1,55 @@
+{%   extends 'layout.html'       %}
+{% block content  %}
+<style>
+    .container{
+
+    padding:2%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    }
+    .card{
+    font-size:1em;
+    width:500px;
+    padding:2%;
+    }
+</style>
+<div class="container">
+    <div class="card">
+
+        <h3><center>Login</center></h3>
+        <form method="post" action="">
+            <div class="form-group">
+            {%  csrf_token    %}
+            <div class="m-2">
+                <label>Username:</label>
+    {{ form.username  }}
+            </div>
+                <div class="m-2">
+                    <label>Email:</label>
+        {{ form.email   }}
+                </div>
+                 <div class="m-2">
+                    <label>Password:</label>
+        {{ form.password   }}
+                </div>
+
+
+                <div class="m-2">
+                    <label>Confirm Password:</label>
+        {{ form.confirm_password    }}
+                </div>
+
+                <div class="m-2">
+                    <label>Address:</label>
+        {{ form.address   }}
+                </div>
+
+                <input type="submit" value="Submit">
+                </div>
+        </form>
+
+    </div>
+</div>
+{%  endblock    %}
