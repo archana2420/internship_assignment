@@ -19,7 +19,7 @@
     <div class="card">
 
         <h3><center>Login</center></h3>
-        <form method="post" action="">
+        <form method="POST" action="">
             <div class="form-group">
             {%  csrf_token    %}
             <div class="m-2">
@@ -34,17 +34,17 @@
                     <label>Password:</label>
         {{ form.password   }}
                 </div>
-
-
-                <div class="m-2">
+                 <div class="m-2">
                     <label>Confirm Password:</label>
         {{ form.confirm_password    }}
                 </div>
+
 
                 <div class="m-2">
                     <label>Address:</label>
         {{ form.address   }}
                 </div>
+
 
                 <input type="submit" value="Submit">
                 </div>
