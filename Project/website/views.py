@@ -37,7 +37,8 @@ def login_page(request):
         if form.is_valid():
             email = request.POST['email']
             password = request.POST['password']
-            user = User_info.objects.filter_by(email=email).first()
+            user = User_info.objects.get(email=email)
+            print(user)
             verify = True if (user.password == password) else False
             if user and verify :
                 return redirect('display_info')
