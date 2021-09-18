@@ -11,7 +11,7 @@
     }
     .card{
     font-size:1em;
-    width:500px;
+    width:700px;
     padding:2%;
     }
 
@@ -22,9 +22,9 @@
 </script>
 <div class="container">
     <div class="card">
-        <h1>User info </h1>
-        <table>
-            <tr>
+        <h1><center>User info</center> </h1>
+        <table class="table table-secondary table-hover">
+            <tr class="table table-dark">
                 <th>Username</th>
                 <th>Email</th>
                 <th>Address</th>
@@ -35,8 +35,8 @@
                 <td >{{entry.username}}</td>
                 <td >{{entry.email}}</td>
                 <td >{{entry.address}}</td>
-                <td><button  >Edit</button>
-                <button id="del" >Delete</button></td>
+                <td><button class="btn btn-info" >Edit</button>
+                <button id="del" class="btn btn-danger">Delete</button></td>
                 </tr>
 
         {%  endfor     %}
@@ -45,6 +45,15 @@
             </table>
     </div>
 </div>
-
+<!--<div class="center">-->
+<!--    <input type="checkbox" id="click">-->
+<!--    <label for="click" class="click-me">edit</label>-->
+<!--    <div class="content">-->
+<!--        <div class="header">-->
+<!--            <h2>Modal Popup</h2>-->
+<!--            <label for="click" class="fas fa-times"></label>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
 
 {%  endblock    %}

@@ -24,7 +24,7 @@ def sign_up_page(request):
             print(username)
             info=User_info(username=username,email=email,password=password,address=address)
             info.save()
-            
+
             return redirect('login_page')
     else:
         return render(request,'sign_up.html',{'form':form})
