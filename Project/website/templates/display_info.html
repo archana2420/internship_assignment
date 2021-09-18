@@ -20,7 +20,7 @@
     background-color:rgba(0,0,0,0.4);
     position:absolute;
     top:0;
-    display:none;
+
     justify-content:center;
     align-items:center;
     }
@@ -40,15 +40,6 @@
     }
 </style>
 <script>
-var ele=document.getElementsByClassName("edit");
-var modal=document.getElementsByClassName("bg-modal");
-for(var i=0;i<ele.length;i++)
-{
-    ele[i].addEventListener('click',()=>{
-        modal.style.display="block";
-    })
-
-}
 
 </script>
 <div class="container">
@@ -66,7 +57,7 @@ for(var i=0;i<ele.length;i++)
                 <td >{{entry.username}}</td>
                 <td >{{entry.email}}</td>
                 <td >{{entry.address}}</td>
-                <td><button class="btn btn-info edit" >Edit</button>
+                <td><button class="btn btn-info edit"  >Edit</button>
                 <button id="del" class="btn btn-danger">Delete</button></td>
                 </tr>
 
@@ -86,12 +77,12 @@ for(var i=0;i<ele.length;i++)
 <!--        </div>-->
 <!--    </div>-->
 <!--</div>-->
-<div class="bg-modal">
-    <div class="modal-content">
-        <div class="close">X</div>
-        <h6>Hello there</h6>
-    </div>
-</div>
+<!--<div class="bg-modal" style="display:none;">-->
+<!--    <div class="modal-content">-->
+<!--        <div class="close">X</div>-->
+<!--        <h6>details</h6>-->
+<!--    </div>-->
+<!--</div>-->
 
 
 
