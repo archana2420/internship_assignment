@@ -1,0 +1,50 @@
+{%   extends 'layout.html'       %}
+{% block content  %}
+<style>
+    .container{
+
+    padding:2%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    }
+    .card{
+    font-size:1em;
+    width:500px;
+    padding:2%;
+    }
+
+</style>
+<script>
+
+
+</script>
+<div class="container">
+    <div class="card">
+        <h1>User info </h1>
+        <table>
+            <tr>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>Options</th>
+            </tr>
+        {% for entry in entries         %}
+            <tr >
+                <td >{{entry.username}}</td>
+                <td >{{entry.email}}</td>
+                <td >{{entry.address}}</td>
+                <td><button  >Edit</button>
+                <button id="del" >Delete</button></td>
+                </tr>
+
+        {%  endfor     %}
+
+
+            </table>
+    </div>
+</div>
+
+
+{%  endblock    %}
